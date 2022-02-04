@@ -25,6 +25,8 @@ h2{
 footer{
   height: 75px;
   background-color: $green-color;
+  color: #ffffff;
+  font-size: 2vh;
 }
 
 .flexCenter {
@@ -111,9 +113,13 @@ footer{
     margin-bottom: 20px;
   }
 
+  footer{
+    font-size: 1.5vh;
+  }
+
   .searchBar{
     height: 5vh;
-    width: 40vw;
+    width: 50vw;
   }
 
   .submitButton{

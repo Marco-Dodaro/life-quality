@@ -22,6 +22,10 @@ h2{
   margin-bottom: 30px;
 }
 
+input:focus{
+  outline-color: #000000;
+}
+
 footer{
   height: 75px;
   background-color: $green-color;
@@ -84,9 +88,9 @@ br.responsive {
 }
 
 .submitButton{
-  height: 5vh;
+  height: 35px;
   width: 60px;
-  font-size: 2.5vh;
+  font-size: 16px;
   background-color: $green-color;
   color: #f0f0f0;
   cursor: pointer;
@@ -113,7 +117,7 @@ br.responsive {
   }
 
   h2{
-    font-size: 2vh;
+    font-size: 15px;
     margin-bottom: 20px;
   }
 
@@ -126,7 +130,7 @@ br.responsive {
   }
 
   .searchBar{
-    height: 5vh;
+    height: 35px;
     width: 50vw;
   }
 

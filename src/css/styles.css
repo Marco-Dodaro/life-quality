@@ -6,5 +6,122 @@
 }
 
 body {
-  background-color: #000000;
+  background-color: #f0f0f0;
+}
+
+h1 {
+  height: 40vh;
+  color: #15ab04;
+  font-size: 10vh;
+}
+
+h2 {
+  font-size: 3vh;
+  margin-bottom: 30px;
+}
+
+footer {
+  height: 75px;
+  background-color: #15ab04;
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.directionRow {
+  flex-direction: row;
+}
+
+.directionColumn {
+  flex-direction: column;
+}
+
+.topDecoration {
+  height: 50px;
+  background-color: #15ab04;
+}
+
+.textLeft {
+  text-align: left;
+}
+
+.displayResults {
+  font-size: 15px;
+  min-height: 31vh;
+  height: fit-content;
+  width: fit-content;
+}
+
+.displayResultsStyles {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-style: solid;
+  border-color: #15ab04;
+  border-width: 3px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 35vw;
+  margin-right: 35vw;
+  background-color: #ffffff;
+}
+
+.searchBar {
+  height: 5vh;
+  width: 30vw;
+}
+
+.submitButton {
+  height: 5vh;
+  width: 60px;
+  font-size: 2.5vh;
+  background-color: #15ab04;
+  color: #f0f0f0;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: #0f7d04;
+}
+
+#errorMessageBox {
+  height: auto;
+  color: #dd3c3c;
+  margin-left: -60px;
+  margin-top: 5px;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 420px) {
+  h1 {
+    height: 20vh;
+    color: #15ab04;
+    font-size: 10.5vw;
+  }
+  h2 {
+    font-size: 2vh;
+    margin-bottom: 20px;
+  }
+  .searchBar {
+    height: 5vh;
+    width: 40vw;
+  }
+  .submitButton {
+    width: 50px;
+  }
+  .displayResults {
+    min-height: 55vh;
+    max-width: max-content;
+  }
+  .displayResultsStyles {
+    margin-left: 4vw;
+    margin-right: 4vw;
+  }
+  #errorMessageBox {
+    margin-left: 0px;
+  }
 }

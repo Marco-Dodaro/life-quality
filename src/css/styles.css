@@ -27,6 +27,10 @@ footer {
   font-size: 2vh;
 }
 
+br.responsive {
+  display: none;
+}
+
 .flexCenter {
   display: flex;
   justify-content: center;
@@ -110,6 +114,9 @@ footer {
   }
   footer {
     font-size: 1.5vh;
+  }
+  br.responsive {
+    display: inline;
   }
   .searchBar {
     height: 5vh;

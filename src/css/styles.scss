@@ -29,6 +29,10 @@ footer{
   font-size: 2vh;
 }
 
+br.responsive {
+  display: none;
+}
+
 .flexCenter {
   display: flex;
   justify-content: center;
@@ -88,16 +92,16 @@ footer{
   cursor: pointer;
   &:hover{
     background-color: #0f7d04;
-
+    }
   }
-}
 
-#errorMessageBox{
-  height: auto;
-  color: #dd3c3c;
-  margin-left: -60px;
-  margin-top: 5px;
-}
+  #errorMessageBox{
+    height: auto;
+    color: #dd3c3c;
+    margin-left: -60px;
+    margin-top: 5px;
+  }
+
 
 /* Mobile Styles */
 @media only screen and (max-width: 420px) {
@@ -115,6 +119,10 @@ footer{
 
   footer{
     font-size: 1.5vh;
+  }
+
+  br.responsive {
+    display: inline; // Hide BR tag for wider screens
   }
 
   .searchBar{

@@ -1,4 +1,4 @@
-//import "../css/styles.css";
+import "../css/styles.css";
 
 const apiUrlRoot = "https://api.teleport.org/api/urban_areas/";
 

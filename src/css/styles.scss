@@ -83,12 +83,12 @@ br.responsive {
 }
 
 .searchBar{
-  height: 5vh;
+  height: 38px;
   width: 30vw;
 }
 
 .submitButton{
-  height: 35px;
+  height: 38px;
   width: 60px;
   font-size: 16px;
   background-color: $green-color;
@@ -135,6 +135,7 @@ br.responsive {
   }
 
   .submitButton{
+    height: 35px;
     width: 50px;
   }
 

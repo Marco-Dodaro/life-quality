@@ -86,6 +86,7 @@ br.responsive {
   margin-left: 35vw;
   margin-right: 35vw;
   background-color: #ffffff;
+  line-height: 20px;
 }
 
 .searchBar {

@@ -27,28 +27,43 @@ document.addEventListener('DOMContentLoaded', () => {
         .then((city) => generateHtml(city))
 
       const generateHtml = (data) => {
-        const searchBarDiv = document.querySelector("#errorMessageBox");
-        const dataDiv = document.querySelector(".displayResults");
 
-        if (data.categories == undefined) {
+        const searchBarDiv = document.querySelector("#errorMessageBox");
+        const resultsDiv = document.querySelector(".displayResults");
+        const categoriesDiv = document.querySelector(".displayCategories");
+        const dataDiv = document.querySelector(".displayData");
+
+        if (data.summary == undefined) {
           dataDiv.innerHTML = ``;
-          dataDiv.classList.remove("displayResultsStyles", "flexCenter");
+          categoriesDiv.innerHTML = ``;
+          resultsDiv.classList.remove("displayResultsStyles", "flexCenter");
           searchBarDiv.innerHTML = `Invalid city name or city not found`;
           throw 'City not found';
         } else {
+
           searchBarDiv.innerHTML = ``;
-          //console.log (data);
-          let categories = JSON.stringify(data.categories, null, 2);
+
+        //  console.log (data);
+          let categories = data.categories;
+          resultsDiv.classList.add("displayResultsStyles", "flexCenter", "directionColumn");
+
+              const categoriesSection = `<div id="catgoriesSection" class="flexCenter directionColumn"><b>Categories:</b></div><br/>`;
+              categoriesDiv.innerHTML = categoriesSection;
+              resultsDiv.style = "align-items: unset"
+
+              for (let i = 0; i < categories.length; i++) {
+                let div = document.createElement("div");
+                div.innerHTML = "- " + categories[i].name + ": " + categories[i].score_out_of_10.toFixed(1) + `<br/>` ;
+                categoriesDiv.appendChild(div);
+              }
 
           const html = `
-            <div class="flexCenter directionColumn textLeft">Categories:</div>
-            <pre class="directionColumn textLeft">${categories}</pre></br>
-            <div class="flexCenter directionColumn textLeft">Summary:</div>
-            <div class="flexCenter directionColumn textLeft">${data.summary}</div></br>
-            <div class="flexCenter directionColumn textLeft">Teleport city score:</div>
-            <div class="flexCenter directionColumn textLeft">${data.teleport_city_score}</div>
+            <br/>
+            <div class="flexCenter directionColumn"><b>Summary:</b></div></br>
+            <div class="flexCenter directionColumn">${data.summary}</div></br>
+            <div class="flexCenter directionColumn"><b>Teleport city score:</b></div>
+            <div class="flexCenter directionColumn">${data.teleport_city_score.toFixed(0)}</div>
           `;
-          dataDiv.classList.add("displayResultsStyles", "flexCenter", "directionColumn");
           dataDiv.innerHTML = html;
         }
       }

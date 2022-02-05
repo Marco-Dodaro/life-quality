@@ -37,6 +37,10 @@ br.responsive {
   display: none;
 }
 
+.displayInline{
+  display: inline;
+}
+
 .flexCenter {
   display: flex;
   justify-content: center;
@@ -64,7 +68,11 @@ br.responsive {
   font-size: 15px;
   min-height: 31vh;
   height: fit-content;
-  width: fit-content;
+  width: auto;
+}
+
+.displayData, .displayCategories{
+  font-size: 15px;
 }
 
 .displayResultsStyles{
@@ -126,7 +134,7 @@ br.responsive {
   }
 
   br.responsive {
-    display: inline; // Hide BR tag for wider screens
+    display: inline;
   }
 
   .searchBar{
@@ -141,7 +149,7 @@ br.responsive {
 
   .displayResults{
     min-height: 55vh;
-    max-width: max-content;
+    max-width: auto;
   }
 
   .displayResultsStyles{

@@ -35,6 +35,10 @@ br.responsive {
   display: none;
 }
 
+.displayInline {
+  display: inline;
+}
+
 .flexCenter {
   display: flex;
   justify-content: center;
@@ -62,7 +66,11 @@ br.responsive {
   font-size: 15px;
   min-height: 31vh;
   height: fit-content;
-  width: fit-content;
+  width: auto;
+}
+
+.displayData, .displayCategories {
+  font-size: 15px;
 }
 
 .displayResultsStyles {
@@ -132,7 +140,7 @@ br.responsive {
   }
   .displayResults {
     min-height: 55vh;
-    max-width: max-content;
+    max-width: auto;
   }
   .displayResultsStyles {
     margin-left: 4vw;

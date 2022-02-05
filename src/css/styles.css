@@ -64,7 +64,7 @@ br.responsive {
 
 .displayResults {
   font-size: 15px;
-  min-height: 31vh;
+  min-height: 40vh;
   height: fit-content;
   width: auto;
 }

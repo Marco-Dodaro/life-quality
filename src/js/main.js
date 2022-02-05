@@ -33,8 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (data.categories == undefined) {
           dataDiv.innerHTML = ``;
           dataDiv.classList.remove("displayResultsStyles", "flexCenter");
-          searchBarDiv.innerHTML = `Invalid city name`;
-          throw 'City name not found';
+          searchBarDiv.innerHTML = `Invalid city name or city not found`;
+          throw 'City not found';
         } else {
           searchBarDiv.innerHTML = ``;
           //console.log (data);

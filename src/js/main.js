@@ -22,9 +22,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       let apiUrl = apiUrlRoot + "slug:" + city + "/scores/";
 
-      fetch(apiUrl)
-        .then((data) => data.json())
-        .then((city) => generateHtml(city))
+    const getData = async () => {
+      let response = await fetch(apiUrl);
+      let data = response.json();
+      return data;
+    }
+
+    getData().then((city) => generateHtml(city))
 
       const generateHtml = (data) => {
 
